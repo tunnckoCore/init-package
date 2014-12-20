@@ -1,0 +1,31 @@
+{
+  "name": "init-package",
+  "version": "0.0.0",
+  "description": "Initialize node/npm project, normalize and populate templates with data",
+  "scripts": {
+    "lint": "jshint . && jscs . --reporter inline",
+    "test": "mocha",
+    "test-cov": "istanbul cover _mocha",
+    "test-travis": "istanbul cover _mocha --report lcovonly"
+  },
+  "author": {
+    "name": "Charlike Make Reagent",
+    "email": "mameto_100@mail.bg",
+    "url": "https://github.com/tunnckoCore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tunnckoCore/init-package.git"
+  },
+  "keywords": [],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/tunnckoCore/init-package/blob/master/license.md"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul-harmony": "^0.3.1",
+    "mocha": "^2.0.1",
+    "mocha-lcov-reporter": "^0.0.1"
+  }
+}
