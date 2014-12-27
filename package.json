@@ -17,12 +17,35 @@
     "type": "git",
     "url": "git://github.com/tunnckoCore/init-package.git"
   },
-  "keywords": [],
+  "keywords": [
+    "data",
+    "hogan",
+    "hoganjs",
+    "init",
+    "initialize",
+    "js",
+    "json",
+    "nlz",
+    "node",
+    "normalize",
+    "npm",
+    "npm-init",
+    "package",
+    "project",
+    "scaffold",
+    "scaffolder",
+    "template",
+    "templates"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/tunnckoCore/init-package/blob/master/license.md"
   },
-  "dependencies": {},
+  "dependencies": {
+    "co": "^4.0.2",
+    "object-validate": "^1.0.0",
+    "prompt-promise": "^1.0.0"
+  },
   "devDependencies": {
     "istanbul-harmony": "^0.3.1",
     "mocha": "^2.0.1",

@@ -7,11 +7,28 @@
 
 'use strict';
 
-var path = require('path');
+var prompt = require('prompt-promise');
 var co = require('co');
-var prompt = require('co-prompt');
-var meow = require('meow');
 
-module.exports = function initPackage() {
-  // body
-};
+function catched(err) {
+  console.log('error:', err);
+  prompt.end();
+}
+
+co(function * prompting() {
+  var confirm = prompt.confirm;
+  var password = prompt.password;
+  var multiline = prompt.multiline;
+
+  var username    = yield prompt('username: ');
+  var password    = yield password('password: ');
+  var description = yield multiline('description: ');
+  var isOkey      = yield confirm('Is okey?: ');
+
+  return yield [username, password, description, isOkey];
+})
+.then(function fulfilled(val) {
+  console.log('response:', val);
+  prompt.end();
+})
+.catch(catched);
